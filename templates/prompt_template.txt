@@ -1,1 +1,0 @@
-Extract the {data_type} for {entity} from the following content: {content}

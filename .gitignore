@@ -1,29 +1,10 @@
-# Ignore Python bytecode files
-*.pyc
+# Ignore Python cache
 __pycache__/
+*.pyc
 
-# Ignore virtual environment
-venv/
-env/
-
-# Ignore environment variable files
+# Environment files
 .env
 
-# Ignore system-specific files
-.DS_Store
-Thumbs.db
-
-# Ignore log files
-*.log
-
-# Ignore setup-related files
-setup.py
-
-# Ignore IDE configuration files (if you're using VSCode)
-.vscode/
-
-# Ignore Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# Ignore the requirements file if you don't want to track it (optional)
-# requirements.txt
+# Credentials and API keys
+credentials.json
+api_keys.json
