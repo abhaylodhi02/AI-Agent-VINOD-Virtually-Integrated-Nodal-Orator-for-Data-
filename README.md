@@ -1,8 +1,8 @@
 # AI-Powered Data Query Dashboard
 This project is an AI-powered dashboard built with Streamlit, allowing users to upload a CSV file or connect to a Google Sheet to query specific columns. The application allows users to input natural language queries and fetch relevant search results using the SERP API. The results are displayed in a DataFrame and can be downloaded as CSV files.
 
-# Project Setup
-# Prerequisites
+# Project Setup:
+## Prerequisites
 Ensure you have the following installed:
 
 Python 3.7+
