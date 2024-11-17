@@ -112,12 +112,12 @@ For a column containing product names, if the user queries, "Get detailed inform
    <img src="https://github.com/user-attachments/assets/e4170014-2361-42c2-8f9f-f928f94e6a39" width="650" height="550">
 
 3. Select the column on which search query execution is to be made and enter the prompt. Do not change {column_name} as it is for dynamically handling multiple inputs.
-   
-   <img src="https://github.com/user-attachments/assets/1ed693d8-f616-4be9-8994-1df177e9c819" width="700" height="600">
+
+   <img src="https://github.com/user-attachments/assets/a92e322d-74a5-4a75-8067-0d45d2fa7d97" width="700" height="600">
 
 4. Get the output. Users can download these results as a CSV file for further analysis.
-
-   <img src="https://github.com/user-attachments/assets/d55c18c9-d81d-4d82-a8e0-ee1d3cabf91a" width="700" height="600">
+   
+   <img src="https://github.com/user-attachments/assets/a1af3be4-40dd-409f-bece-e049be74979b" width="700" height="600">
 
 
 # THANK YOU!!!
