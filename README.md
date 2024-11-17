@@ -105,19 +105,19 @@ For a column containing product names, if the user queries, "Get detailed inform
 ## Example Demo: 
 1. Upload a csv file or connect a google sheet via URL.
    
-   <img src="https://github.com/user-attachments/assets/f6d8d9a8-7f84-4cc8-87ed-cfc02c5077f3" width="600" height="400">
+   <img src="https://github.com/user-attachments/assets/f6d8d9a8-7f84-4cc8-87ed-cfc02c5077f3" width="500" height="300">
   
 2. Get the preview of the uploaded file.
 
-   <img src="https://github.com/user-attachments/assets/e4170014-2361-42c2-8f9f-f928f94e6a39" width="750" height="650">
+   <img src="https://github.com/user-attachments/assets/e4170014-2361-42c2-8f9f-f928f94e6a39" width="650" height="550">
 
 3. Select the column on which search query execution is to be made and enter the prompt. Do not change {column_name} as it is for dynamically handling multiple inputs.
    
-   <img src="https://github.com/user-attachments/assets/1ed693d8-f616-4be9-8994-1df177e9c819" width="800" height="700">
+   <img src="https://github.com/user-attachments/assets/1ed693d8-f616-4be9-8994-1df177e9c819" width="700" height="600">
 
 4. Get the output. Users can download these results as a CSV file for further analysis.
 
-   <img src="https://github.com/user-attachments/assets/d55c18c9-d81d-4d82-a8e0-ee1d3cabf91a" width="800" height="700">
+   <img src="https://github.com/user-attachments/assets/d55c18c9-d81d-4d82-a8e0-ee1d3cabf91a" width="700" height="600">
 
 
 # THANK YOU!!!
