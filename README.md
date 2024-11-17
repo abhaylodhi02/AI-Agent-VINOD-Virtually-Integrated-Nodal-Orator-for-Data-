@@ -1,6 +1,8 @@
 # AI-Powered Data Query Dashboard
 This project is an AI-powered dashboard built with Streamlit, allowing users to upload a CSV file or connect to a Google Sheet to query specific columns. The application allows users to input natural language queries and fetch relevant search results using the SERP API. The results are displayed in a DataFrame and can be downloaded as CSV files.
 
+Loom Video Link: https://www.loom.com/share/be90866467514d878291e8cff2934ce8?sid=c1a1212b-3332-4286-af24-2b1865782a82
+
 # Project Setup:
 ## Prerequisites
 Ensure you have the following installed:
