@@ -25,13 +25,34 @@ def get_google_sheets_service():
     )
     return build("sheets", "v4", credentials=credentials)
 
-# Function to read Google Sheet
+# Function to fetch all tab (worksheet) names in a spreadsheet
+def get_tab_names(spreadsheet_id):
+    service = get_google_sheets_service()
+    try:
+        # Get spreadsheet metadata
+        spreadsheet = service.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
+        # Extract sheet names
+        sheets = spreadsheet.get("sheets", [])
+        tab_names = [sheet["properties"]["title"] for sheet in sheets]
+        return tab_names
+    except Exception as e:
+        raise Exception(f"Error fetching tab names: {e}")
+
+# Function to read Google Sheet with correct range handling
 def read_google_sheet(spreadsheet_id, range_name):
     service = get_google_sheets_service()
     sheet = service.spreadsheets()
-    result = sheet.values().get(spreadsheetId=spreadsheet_id, range=range_name).execute()
-    values = result.get("values", [])
-    return pd.DataFrame(values[1:], columns=values[0]) if values else pd.DataFrame()
+    try:
+        # Attempt to get data from the sheet with the provided range
+        result = sheet.values().get(spreadsheetId=spreadsheet_id, range=range_name).execute()
+        values = result.get("values", [])
+        # If data exists, return as DataFrame
+        if values:
+            return pd.DataFrame(values[1:], columns=values[0])  # The first row is used as column names
+        else:
+            return pd.DataFrame()  # Return an empty DataFrame if no data is found
+    except Exception as e:
+        raise Exception(f"Error reading Google Sheet: {e}")
 
 # Function to perform a web search (for getting context-specific information)
 def perform_web_search(query):
@@ -66,7 +87,18 @@ elif file_or_sheet == "Connect Google Sheet":
         try:
             # Extract Spreadsheet ID from URL
             spreadsheet_id = google_sheet_url.split("/")[5]
-            range_name = "Sheet1"  # Change if needed
+            
+            # Fetch available tab names
+            tab_names = get_tab_names(spreadsheet_id)
+            st.write("Available Tabs:", tab_names)
+            
+            # Let the user select a tab
+            selected_tab = st.selectbox("Select a Tab", tab_names)
+            
+            # Define the range dynamically based on the selected tab
+            range_name = f"{selected_tab}!A1:Z1000"
+            
+            # Read data from the selected tab
             st.session_state.df = read_google_sheet(spreadsheet_id, range_name)
             st.write("Google Sheet Data Preview:")
             st.dataframe(st.session_state.df)
